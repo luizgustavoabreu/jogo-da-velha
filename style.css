@@ -7,7 +7,7 @@
 body {
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(to right, #3a7bd5, #3a6073);
+  background: #3a7bd5;
 }
 
 .board {
@@ -26,7 +26,7 @@ body {
 .board.x .cell:not(.x):not(.circle):hover::before,
 .board.circle .cell:not(.x):not(.circle):hover::after,
 .board.circle .cell:not(.x):not(.circle):hover::before {
-  background: rgba(255, 255, 255, 0.3) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
 }
 
 .cell {
@@ -102,7 +102,7 @@ body {
 }
 
 .winning-message {
-  display: flex;
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -123,4 +123,14 @@ body {
   border: none;
   margin-top: 16px;
   color: white;
+}
+
+.winning-message-button:hover {
+  color: #3a7bd5;
+  background-color: white;
+}
+
+.winning-message-text {
+  color: white;
+  font-size: 5rem;
 }
